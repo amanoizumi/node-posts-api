@@ -2,17 +2,16 @@
   "name": "mongoosetest",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "mongoose": "^7.0.1",
-    "uuid": "^9.0.0"
+    "mongoose": "^7.0.1"
   },
   "engines": {
     "node": "v16.x"
