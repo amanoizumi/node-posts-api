@@ -12,6 +12,7 @@ function handleError(res, err) {
     "status": "false",
     message
   }))
+  console.log(err);
   res.end();
 }
 module.exports = handleError;

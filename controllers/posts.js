@@ -32,10 +32,10 @@ const posts = {
     handleSuccess(res, posts);
   },
   async deleteOnePost({ id, req, res }) {
-    if (id) {
-      const posts = await Posts.findByIdAndDelete(id);
-      handleSuccess(res, posts);
-    } else {
+    try {
+      await Posts.findByIdAndDelete(id);
+      handleSuccess(res, null);
+    } catch (err) {
       handleError(res, err);
     }
   },
@@ -49,7 +49,7 @@ const posts = {
         const editPost = await Posts.findByIdAndUpdate(id, editContent);
         handleSuccess(res, editPost);
       } else {
-        handleError(res, err);
+        handleError(res);
       }
     } catch (err) {
       handleError(res, err);
