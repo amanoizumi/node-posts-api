@@ -3,7 +3,7 @@ const PostControllers = require('../controllers/posts');
 
 const routes = async (req, res) => {
   const { url, method } = req;
-  console.log('url, method =>', url, method);
+
   let body = '';
   req.on('data', (chunk) => {
     body += chunk;

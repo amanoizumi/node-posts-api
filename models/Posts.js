@@ -43,7 +43,6 @@ const postSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-
 const posts = mongoose.model('posts', postSchema);
 
 module.exports = posts;

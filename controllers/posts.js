@@ -40,12 +40,8 @@ const posts = {
     }
   },
   async editOnePost({ id, body, req, res }) {
-    console.log(id, body);
-    console.log('body=>', body);
     try {
       const data = JSON.parse(body);
-      console.log(data);
-      const id = req.url.split('/').pop();
       if (data.content !== undefined) {
         const editContent = {
           content: data.content,
